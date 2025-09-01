@@ -1,5 +1,5 @@
-
-<html lang="fa">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +16,23 @@
             font-style: normal;
         }
         
+        /* مخفی کردن نام ریپوزیتوری و عناصر گیتهاب */
+        .header, .repository-content, .file-navigation, 
+        .gh-header, .AppHeader, .Layout-sidebar,
+        .footer, .mt-6, .Layout-main .container-lg {
+            display: none !important;
+        }
+        
+        /* نمایش فقط محتوای اصلی */
+        .Layout-main, body {
+            display: block !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        /* استایل‌های اصلی بازی */
         body {
             font-family: 'Vazir', sans-serif;
             direction: rtl;
@@ -358,7 +375,7 @@
             }
         }
         
-        // تابع برای بررسی پاسخ
+        // تابع для بررسی پاسخ
         function checkAnswer(questionNum) {
             var target = document.getElementById("target" + questionNum);
             var feedback = document.getElementById("feedback" + questionNum);
